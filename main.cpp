@@ -1,6 +1,10 @@
 #include <iostream>
+#include <tesseract/baseapi.h>
+#include <leptonica/allheaders.h>
+#include "image_processing.h"
+
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    testFunction();
     return 0;
 }
