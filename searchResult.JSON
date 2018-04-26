@@ -1,0 +1,513 @@
+{
+ "kind": "customsearch#search",
+ "url": {
+  "type": "application/json",
+  "template": "https://www.googleapis.com/customsearch/v1?q={searchTerms}&num={count?}&start={startIndex?}&lr={language?}&safe={safe?}&cx={cx?}&sort={sort?}&filter={filter?}&gl={gl?}&cr={cr?}&googlehost={googleHost?}&c2coff={disableCnTwTranslation?}&hq={hq?}&hl={hl?}&siteSearch={siteSearch?}&siteSearchFilter={siteSearchFilter?}&exactTerms={exactTerms?}&excludeTerms={excludeTerms?}&linkSite={linkSite?}&orTerms={orTerms?}&relatedSite={relatedSite?}&dateRestrict={dateRestrict?}&lowRange={lowRange?}&highRange={highRange?}&searchType={searchType}&fileType={fileType?}&rights={rights?}&imgSize={imgSize?}&imgType={imgType?}&imgColorType={imgColorType?}&imgDominantColor={imgDominantColor?}&alt=json"
+ },
+ "queries": {
+  "request": [
+   {
+    "title": "Google Custom Search - hello",
+    "totalResults": "166000000",
+    "searchTerms": "hello",
+    "count": 5,
+    "startIndex": 1,
+    "inputEncoding": "utf8",
+    "outputEncoding": "utf8",
+    "safe": "off",
+    "cx": "013405187926511280840:o0p-h54b9ze"
+   }
+  ],
+  "nextPage": [
+   {
+    "title": "Google Custom Search - hello",
+    "totalResults": "166000000",
+    "searchTerms": "hello",
+    "count": 5,
+    "startIndex": 6,
+    "inputEncoding": "utf8",
+    "outputEncoding": "utf8",
+    "safe": "off",
+    "cx": "013405187926511280840:o0p-h54b9ze"
+   }
+  ]
+ },
+ "context": {
+  "title": "Google"
+ },
+ "searchInformation": {
+  "searchTime": 0.492941,
+  "formattedSearchTime": "0.49",
+  "totalResults": "166000000",
+  "formattedTotalResults": "166,000,000"
+ },
+ "items": [
+  {
+   "kind": "customsearch#result",
+   "title": "Adele - Hello - YouTube",
+   "htmlTitle": "Adele - \u003cb\u003eHello\u003c/b\u003e - YouTube",
+   "link": "https://www.youtube.com/watch?v=YQHsXMglC9A",
+   "displayLink": "www.youtube.com",
+   "snippet": "Oct 22, 2015 ... 'Hello' is taken from the new album, 25, out November 20. http://adele.com \nAvailable now from iTunes http://smarturl.it/itunes25 Available now from Amazon \nht...",
+   "htmlSnippet": "Oct 22, 2015 \u003cb\u003e...\u003c/b\u003e &#39;\u003cb\u003eHello\u003c/b\u003e&#39; is taken from the new album, 25, out November 20. http://adele.com \u003cbr\u003e\nAvailable now from iTunes http://smarturl.it/itunes25 Available now from Amazon \u003cbr\u003e\nht...",
+   "cacheId": "hisqDBlSEToJ",
+   "formattedUrl": "https://www.youtube.com/watch?v=YQHsXMglC9A",
+   "htmlFormattedUrl": "https://www.youtube.com/watch?v=YQHsXMglC9A",
+   "pagemap": {
+    "cse_thumbnail": [
+     {
+      "width": "300",
+      "height": "168",
+      "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTv0QFbzW1X0JqqLN9Wp0KsTscWBAjUFTffvOYWy2LjnETK3WnduD2FZAg"
+     }
+    ],
+    "metatags": [
+     {
+      "title": "Adele - Hello",
+      "theme-color": "#ff0000",
+      "og:site_name": "YouTube",
+      "og:url": "https://www.youtube.com/watch?v=YQHsXMglC9A",
+      "og:title": "Adele - Hello",
+      "og:image": "https://i.ytimg.com/vi/YQHsXMglC9A/maxresdefault.jpg",
+      "og:description": "‘Hello' is taken from the new album, 25, out November 20. http://adele.com Available now from iTunes http://smarturl.it/itunes25 Available now from Amazon ht...",
+      "al:ios:app_store_id": "544007664",
+      "al:ios:app_name": "YouTube",
+      "al:ios:url": "vnd.youtube://www.youtube.com/watch?v=YQHsXMglC9A&feature=applinks",
+      "al:android:url": "vnd.youtube://www.youtube.com/watch?v=YQHsXMglC9A&feature=applinks",
+      "al:android:app_name": "YouTube",
+      "al:android:package": "com.google.android.youtube",
+      "al:web:url": "https://www.youtube.com/watch?v=YQHsXMglC9A&feature=applinks",
+      "og:type": "video.other",
+      "og:video:url": "https://www.youtube.com/embed/YQHsXMglC9A",
+      "og:video:secure_url": "https://www.youtube.com/embed/YQHsXMglC9A",
+      "og:video:type": "text/html",
+      "og:video:width": "1280",
+      "og:video:height": "720",
+      "og:video:tag": "Adele",
+      "fb:app_id": "87741124305",
+      "twitter:card": "player",
+      "twitter:site": "@youtube",
+      "twitter:url": "https://www.youtube.com/watch?v=YQHsXMglC9A",
+      "twitter:title": "Adele - Hello",
+      "twitter:description": "‘Hello' is taken from the new album, 25, out November 20. http://adele.com Available now from iTunes http://smarturl.it/itunes25 Available now from Amazon ht...",
+      "twitter:image": "https://i.ytimg.com/vi/YQHsXMglC9A/maxresdefault.jpg",
+      "twitter:app:name:iphone": "YouTube",
+      "twitter:app:id:iphone": "544007664",
+      "twitter:app:name:ipad": "YouTube",
+      "twitter:app:id:ipad": "544007664",
+      "twitter:app:url:iphone": "vnd.youtube://www.youtube.com/watch?v=YQHsXMglC9A&feature=applinks",
+      "twitter:app:url:ipad": "vnd.youtube://www.youtube.com/watch?v=YQHsXMglC9A&feature=applinks",
+      "twitter:app:name:googleplay": "YouTube",
+      "twitter:app:id:googleplay": "com.google.android.youtube",
+      "twitter:app:url:googleplay": "https://www.youtube.com/watch?v=YQHsXMglC9A",
+      "twitter:player": "https://www.youtube.com/embed/YQHsXMglC9A"
+     }
+    ],
+    "videoobject": [
+     {
+      "url": "https://www.youtube.com/watch?v=YQHsXMglC9A",
+      "name": "Adele - Hello",
+      "description": "‘Hello' is taken from the new album, 25, out November 20. http://adele.com Available now from iTunes http://smarturl.it/itunes25 Available now from Amazon ht...",
+      "paid": "False",
+      "channelid": "UComP_epzeKzvBX156r6pm1Q",
+      "videoid": "YQHsXMglC9A",
+      "duration": "PT6M7S",
+      "unlisted": "False",
+      "thumbnailurl": "https://i.ytimg.com/vi/YQHsXMglC9A/maxresdefault.jpg",
+      "embedurl": "https://www.youtube.com/embed/YQHsXMglC9A",
+      "playertype": "HTML5 Flash",
+      "width": "1280",
+      "height": "720",
+      "isfamilyfriendly": "True",
+      "regionsallowed": "AD,AE,AF,AG,AI,AL,AM,AO,AQ,AR,AS,AT,AU,AW,AX,AZ,BA,BB,BD,BE,BF,BG,BH,BI,BJ,BL,BM,BN,BO,BQ,BR,BS,BT,BV,BW,BY,BZ,CA,CC,CD,CF,CG,CH,CI,CK,CL,CM,CN,CO,CR,CU,CV,CW,CX,CY,CZ,DE,DJ,DK,DM,DO,DZ,EC,EE,EG,EH...",
+      "interactioncount": "2296067568",
+      "datepublished": "2015-10-22",
+      "genre": "Music"
+     }
+    ],
+    "imageobject": [
+     {
+      "url": "https://i.ytimg.com/vi/YQHsXMglC9A/maxresdefault.jpg",
+      "width": "1280",
+      "height": "720"
+     }
+    ],
+    "person": [
+     {
+      "url": "http://www.youtube.com/user/AdeleVEVO"
+     },
+     {
+      "url": "https://plus.google.com/102708372560849505965"
+     }
+    ],
+    "cse_image": [
+     {
+      "src": "https://i.ytimg.com/vi/YQHsXMglC9A/maxresdefault.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "HELLO! - Daily royal, celebrity, fashion, beauty & lifestyle news",
+   "htmlTitle": "\u003cb\u003eHELLO\u003c/b\u003e! - Daily royal, celebrity, fashion, beauty &amp; lifestyle news",
+   "link": "https://www.hellomagazine.com/",
+   "displayLink": "www.hellomagazine.com",
+   "snippet": "HELLO! brings you the latest celebrity & royal news from the UK & around the \nworld, magazine exclusives, fashion, beauty, lifestyle news, celeb babies, \nweddings, pregnancies and more!",
+   "htmlSnippet": "\u003cb\u003eHELLO\u003c/b\u003e! brings you the latest celebrity &amp; royal news from the UK &amp; around the \u003cbr\u003e\nworld, magazine exclusives, fashion, beauty, lifestyle news, celeb babies, \u003cbr\u003e\nweddings, pregnancies and more!",
+   "cacheId": "hxjkDmKHGvIJ",
+   "formattedUrl": "https://www.hellomagazine.com/",
+   "htmlFormattedUrl": "https://www.\u003cb\u003ehello\u003c/b\u003emagazine.com/",
+   "pagemap": {
+    "cse_thumbnail": [
+     {
+      "width": "275",
+      "height": "165",
+      "src": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSkXU6_iy3g8k1rTl_UNMgZBWomWt96Ar3Ta44QPy4cBja2iUxiw69v_NI"
+     }
+    ],
+    "metatags": [
+     {
+      "viewport": "width=device-width, initial-scale=1",
+      "title": "HELLO! UK - Daily royal, celebrity, fashion, beauty & lifestyle news",
+      "origen": "hellomagazine.com",
+      "author": "HELLO!",
+      "dc.creator": "HELLO!",
+      "organization": "HELLO!",
+      "dc.language": "English",
+      "lang": "en-GB",
+      "locality": "London, UK",
+      "distribution": "global",
+      "resource-type": "document",
+      "p:domain_verify": "2e0d0d07c9164557a351ff28f09074ef",
+      "og:description": "News and pictures from the world of celebrity, royalty, entertainment, film and music; fashion trends and videos, health and beauty, celebrity profiles",
+      "og:site_name": "hellomagazine.com",
+      "og:title": "HELLO! Daily News - Celebrity, fashion and beauty",
+      "og:type": "website",
+      "og:url": "https://www.facebook.com/hello",
+      "og:image": "https://www.himgs.com/imagenes/hello/social/hello-logo-facebook.jpg",
+      "fb:pages": "89982930077",
+      "fb:admins": "89982930077",
+      "handheldfriendly": "True",
+      "mobileoptimized": "0",
+      "msvalidate.01": "802E2A1202224ED23A9EF77A39836CEC",
+      "botify-site-verification": "rAorMmkbfzd6yOwJ3PITFmdyCjOzGLug"
+     }
+    ],
+    "sitenavigationelement": [
+     {
+      "url": "Home",
+      "name": "Home"
+     },
+     {
+      "url": "Home",
+      "name": "Home"
+     },
+     {
+      "url": "Home",
+      "name": "Home"
+     }
+    ],
+    "article": [
+     {
+      "image": "https://www.hellomagazine.com/imagenes/celebrities/2018042548114/janet-street-porter-cbe-royal-loose-women/0-239-38/janet-street-porter-saira-khan-e.jpg",
+      "title": "Janet Street Porter told to give CBE back after royal comments"
+     },
+     {
+      "image": "https://www.hellomagazine.com/imagenes/celebrities/2018042548113/strictly-janette-manrara-shares-childhood-photo/0-239-36/janette-manrara-aljaz-skorjanec-e.jpg",
+      "title": "Strictly's Janette Manrara shares adorable childhood snap"
+     },
+     {
+      "image": "https://www.hellomagazine.com/imagenes/celebrities/2018042548091/ant-mcpartlin-return-to-work-next-year-stephen-mulhern/0-238-966/stephen-mulhern-britains-got-talent-launch-e.jpg",
+      "title": "Ant McPartlin update: Stephen Mulhern has some bad news for fans"
+     },
+     {
+      "image": "https://www.hellomagazine.com/imagenes/film/2018042548107/phillip-schofield-bizarre-detail-emmerdale-set/0-239-21/philip-schofield-holly-emmerdale-e.jpg",
+      "title": "Phillip Schofield spots bizarre detail on Emmerdale set"
+     },
+     {
+      "url": "These are the ingredients you NEED for your first BBQ of the year",
+      "image": "https://www.hellomagazine.com/imagenes/bloques//2018-homeLifestyleblock/Barbecue-food-sb.jpg",
+      "title": "These are the ingredients you NEED for your first BBQ of the year"
+     },
+     {
+      "url": "See where Prince William and Kate will be raising the royal baby",
+      "image": "https://www.hellomagazine.com/imagenes/bloques//2018-homeLifestyleblock/William-and-kate-sb.jpg",
+      "title": "See where Prince William and Kate will be raising the royal baby"
+     },
+     {
+      "url": "The world's most Instagrammable hotel has been named – and John Legend is already a fan!",
+      "image": "https://www.hellomagazine.com/imagenes/bloques//2018-homeLifestyleblock/Instagrammable-hotel-sb.jpg",
+      "title": "The world's most Instagrammable hotel has been named – and John Legend is already a fan!"
+     },
+     {
+      "url": "Take a glimpse into Victoria Beckham's bathroom while she does her make-up",
+      "image": "https://www.hellomagazine.com/imagenes/bloques//2018-homeLifestyleblock/victoria-beckham-bathroom-sb.jpg",
+      "title": "Take a glimpse into Victoria Beckham's bathroom while she does her make-up"
+     },
+     {
+      "url": "Things to do in London this week",
+      "image": "https://www.hellomagazine.com/imagenes/bloques//2018-homeLifestyleblock/bloom-room-lifestyle.jpg",
+      "title": "Things to do in London this week"
+     },
+     {
+      "image": "https://www.hellomagazine.com/imagenes/portadas/1-26-harper-beckham-hair-t.jpg",
+      "title": "Victoria Beckham's daughter Harper has had a haircut – see transformation"
+     },
+     {
+      "image": "https://www.hellomagazine.com/imagenes/portadas/21-62-eastenders-tanya-branning-jo-joyner-t.jpg",
+      "title": "EastEnders Tanya Branning actress looks unrecognisable with red hair"
+     },
+     {
+      "image": "https://www.hellomagazine.com/imagenes/healthandbeauty/mother-and-baby/2018042548105/prince-william-kate-middleton-royal-baby-car-seat/0-239-16/Prince-William-and-Kate-royal-baby-car-seat-e.jpg",
+      "title": "Prince William and Kate have used this £110 car seat for all 3 of their children"
+     },
+     {
+      "image": "https://www.hellomagazine.com/imagenes/royalty/2018042548098/prince-harry-meghan-markle-royal-wedding-music/0-238-995/prince-harry-meghan-markle-announce-engagement-e.jpg",
+      "title": "Prince Harry and Meghan Markle choose Britain's Got Talent star to perform at royal wedding"
+     },
+     {
+      "title": "Amanda Holden shows off flawless physique as she hits the gym with this Strictly star"
+     },
+     {
+      "title": "Sarah Jessica Parker denies there was ever a 'catfight' with Kim Cattrall"
+     },
+     {
+      "url": "One writer asks: 'Did you want the Duchess to come out in her pyjamas and a top knot?'",
+      "title": "One writer asks: 'Did you want the Duchess to come out in her pyjamas and a top knot?'"
+     },
+     {
+      "url": "The striking similarity between Kate, Diana and Meghan you've never noticed before",
+      "title": "The striking similarity between Kate, Diana and Meghan you've never noticed before"
+     },
+     {
+      "url": "Latest issue",
+      "image": "https://www.hellomagazine.com/imagenes/magazine/1530/portada-revista-hello-400.jpg",
+      "title": "Latest issue"
+     },
+     {
+      "title": "This is why the royal baby's outfit looked so familiar"
+     },
+     {
+      "title": "Rachel Weisz shows off her baby bump as she walks the red carpet for the first time since announcing pregnancy"
+     },
+     {
+      "title": "Katy Perry confirms she is back in relationship with Orlando Bloom"
+     },
+     {
+      "title": "Peter Andre reveals daughter's 'unbelievable' talent"
+     },
+     {
+      "title": "Kim Kardashian goes nude to create fragrance bottle shaped like her body – and Chrissy Teigen might follow suit"
+     },
+     {
+      "title": "Holly Willoughby wears bargain £6 blouse for This Morning"
+     },
+     {
+      "url": "Kate Middleton opts for stunning red dress as she leaves hospital",
+      "title": "Kate Middleton opts for stunning red dress as she leaves hospital"
+     },
+     {
+      "url": "Has Meghan Markle been taking royal style lessons from Duchess Kate?",
+      "title": "Has Meghan Markle been taking royal style lessons from Duchess Kate?"
+     },
+     {
+      "url": "Meet the stylist responsible for Kate Middleton's Lindo Wing look",
+      "title": "Meet the stylist responsible for Kate Middleton's Lindo Wing look"
+     },
+     {
+      "title": "Did you notice Shaggy break royal protocol at the Queen's 92nd birthday concert?"
+     },
+     {
+      "title": "Kate's royal baby receives first visitor: pregnant auntie Pippa!"
+     },
+     {
+      "title": "Rachel Riley left shocked after Strictly boyfriend Pasha Kovalev spells out naughty word on Countdown"
+     },
+     {
+      "title": "Inside Cristiano Ronaldo's luxury hotels"
+     },
+     {
+      "url": "Afternoon tea, massages, champagne – what it's really like to give birth in Kate Middleton's exclusive... It's not long before Prince William and Kate will be making the trip back to the...",
+      "title": "Afternoon tea, massages, champagne – what it's really like to give birth in Kate Middleton's exclusive..."
+     },
+     {
+      "url": "Harry and Meghan choose Britain's Got Talent star to perform at royal wedding Prince Harry and Meghan Markle are taking a very hands-on approach to their wedding preparations. This week, Kensington...",
+      "title": "Harry and Meghan choose Britain's Got Talent star to perform at royal wedding"
+     },
+     {
+      "url": "See Prince Charles' incredibly sweet congratulatory message to son Prince William and Kate Middleton Prince Charles has expressed his joy at welcoming a new member to the family, saying he...",
+      "title": "See Prince Charles' incredibly sweet congratulatory message to son Prince William and Kate Middleton"
+     },
+     {
+      "url": "Liam Payne reveals his nickname for Cheryl and their favourite way to spend a night in Liam Payne has revealed his nickname for girlfriend Cheryl, affectionately referring to her as \"Chez\"...",
+      "title": "Liam Payne reveals his nickname for Cheryl and their favourite way to spend a night in"
+     },
+     {
+      "url": "Michelle Keegan on her transatlantic marriage to Mark Wright: 'It's not that simple' Michelle Keegan has revealed she has no plans to relocate to Los Angeles with her husband Mark Wright. The...",
+      "title": "Michelle Keegan on her transatlantic marriage to Mark Wright: 'It's not that simple'"
+     },
+     {
+      "url": "Ant McPartlin: Stephen Mulhern has some bad news for fans Ant McPartlin looks set to miss this year's series of I'm A Celebrity. In a new interview with Best magazine, Stephen Mulhern opened...",
+      "title": "Ant McPartlin: Stephen Mulhern has some bad news for fans"
+     },
+     {
+      "url": "Frosé: How to make summer's coolest cocktail It's hard to beat a glass of crisp and cold rosé wine in the summertime, but the newest drinks trend may have just topped it. Meet Frosé, the...",
+      "title": "Frosé: How to make summer's coolest cocktail"
+     },
+     {
+      "url": "Tess Daly and Vernon Kaye enjoy date night at lavish London restaurant Tess Daly and Vernon Kay enjoyed a date night in London on Tuesday, heading to celebrity haunt Hix Oyster and Chop House...",
+      "title": "Tess Daly and Vernon Kaye enjoy date night at lavish London restaurant"
+     },
+     {
+      "url": "The best vegan options available at your favourite chain restaurants As more people choose to go vegan or simply cut down on their meat and dairy intake, many high street restaurants have increased...",
+      "title": "The best vegan options available at your favourite chain restaurants"
+     },
+     {
+      "url": "Phillip Schofield spots bizarre detail on Emmerdale set Phillip Schofield was praised by his This Morning co-presenter, Holly Willoughby, after spotting a tiny detail of the Emmerdale set while...",
+      "title": "Phillip Schofield spots bizarre detail on Emmerdale set"
+     },
+     {
+      "url": "Michelle Keegan talks about Coronation Street return Michelle Keegan bid farewell to Coronation Street in 2014 after six years on the ITV soap. And while she has starred in a range of new projects...",
+      "title": "Michelle Keegan talks about Coronation Street return"
+     },
+     {
+      "url": "Olly Murs addresses relationship with Simon Cowell after joining The Voice UK Olly Murs has revealed he no longer speaks to former boss Simon Cowell since he joined The Voice UK as a judge...",
+      "title": "Olly Murs addresses relationship with Simon Cowell after joining The Voice UK"
+     },
+     {
+      "url": "One writer asks: 'To those complaining about Kate Middleton’s post-baby look, did you want her to come... Other than a period of Netflix-fuelled fascination with Princess Diana last November,...",
+      "title": "One writer asks: 'To those complaining about Kate Middleton’s post-baby look, did you want her to come..."
+     },
+     {
+      "url": "These are the BEST bronzers to give you the ultimate holiday glow ...",
+      "title": "These are the BEST bronzers to give you the ultimate holiday glow"
+     },
+     {
+      "url": "J.K. Rowling unveiled a VERY daring new look last night As the author of the much-loved Harry Potter books J.K. Rowling is something of a national treasure, beloved for her rich imagination,...",
+      "title": "J.K. Rowling unveiled a VERY daring new look last night"
+     }
+    ],
+    "cse_image": [
+     {
+      "src": "https://www.hellomagazine.com/imagenes/bloques//2016-5stories-horizontal/AndreaTop5.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "hello network",
+   "htmlTitle": "\u003cb\u003ehello\u003c/b\u003e network",
+   "link": "https://hello.com/",
+   "displayLink": "hello.com",
+   "snippet": "Connect with people who share your interests. Discover communities you love. \nJoin fun conversations.",
+   "htmlSnippet": "Connect with people who share your interests. Discover communities you love. \u003cbr\u003e\nJoin fun conversations.",
+   "cacheId": "H3Qc_sTd580J",
+   "formattedUrl": "https://hello.com/",
+   "htmlFormattedUrl": "https://\u003cb\u003ehello\u003c/b\u003e.com/",
+   "pagemap": {
+    "cse_thumbnail": [
+     {
+      "width": "225",
+      "height": "225",
+      "src": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQWZOJfuadJqzf7MALMvjt7Pte4lkGoWdy3YvenGlk4Bw3naLgleI41wkk0"
+     }
+    ],
+    "metatags": [
+     {
+      "apple-mobile-web-app-capable": "yes",
+      "apple-mobile-web-app-status-bar-style": "black",
+      "viewport": "width=device-width, initial-scale=1, maximum-scale=1",
+      "author": "Hello Network, Inc.",
+      "og:url": "http://www.hello.com/en/index.html",
+      "og:title": "Join the hello network",
+      "og:image": "http://www.hello.com/img_/hellowithwaves.png",
+      "apple-itunes-app": "app-id=997943308"
+     }
+    ],
+    "cse_image": [
+     {
+      "src": "http://www.hello.com/img_/hellowithwaves.png"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Hello (Adele song) - Wikipedia",
+   "htmlTitle": "\u003cb\u003eHello\u003c/b\u003e (Adele song) - Wikipedia",
+   "link": "https://en.wikipedia.org/wiki/Hello_(Adele_song)",
+   "displayLink": "en.wikipedia.org",
+   "snippet": "\"Hello\" is a song by English singer Adele, released on 23 October 2015 by XL \nRecordings as the lead single from her third studio album, 25 (2015). Adele co-\nwrote the song with her producer, Greg Kurstin. \"Hello\" is a piano ballad with soul \ninfluences, and lyrics that discuss themes of nostalgia and regret. Upon release, \nthe ...",
+   "htmlSnippet": "&quot;\u003cb\u003eHello\u003c/b\u003e&quot; is a song by English singer Adele, released on 23 October 2015 by XL \u003cbr\u003e\nRecordings as the lead single from her third studio album, 25 (2015). Adele co-\u003cbr\u003e\nwrote the song with her producer, Greg Kurstin. &quot;\u003cb\u003eHello\u003c/b\u003e&quot; is a piano ballad with soul \u003cbr\u003e\ninfluences, and lyrics that discuss themes of nostalgia and regret. Upon release, \u003cbr\u003e\nthe&nbsp;...",
+   "cacheId": "z7n3yz7lb8gJ",
+   "formattedUrl": "https://en.wikipedia.org/wiki/Hello_(Adele_song)",
+   "htmlFormattedUrl": "https://en.wikipedia.org/wiki/\u003cb\u003eHello\u003c/b\u003e_(Adele_song)",
+   "pagemap": {
+    "cse_thumbnail": [
+     {
+      "width": "225",
+      "height": "225",
+      "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhTPwGd0i5S8YOngLxcsTn99Z9YW0VOk9ICPGGFfTGRDMViG3FuJ1Lwwk"
+     }
+    ],
+    "metatags": [
+     {
+      "referrer": "origin",
+      "og:image": "https://upload.wikimedia.org/wikipedia/en/8/85/Adele_-_Hello_%28Official_Single_Cover%29.png"
+     }
+    ],
+    "hcard": [
+     {
+      "fn": "Adele",
+      "nickname": "Adele"
+     }
+    ],
+    "cse_image": [
+     {
+      "src": "https://upload.wikimedia.org/wikipedia/en/8/85/Adele_-_Hello_%28Official_Single_Cover%29.png"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Hello | Define Hello at Dictionary.com",
+   "htmlTitle": "\u003cb\u003eHello\u003c/b\u003e | Define \u003cb\u003eHello\u003c/b\u003e at Dictionary.com",
+   "link": "http://www.dictionary.com/browse/hello",
+   "displayLink": "www.dictionary.com",
+   "snippet": "Hello definition, (used to express a greeting, answer a telephone, or attract \nattention.) See more.",
+   "htmlSnippet": "\u003cb\u003eHello\u003c/b\u003e definition, (used to express a greeting, answer a telephone, or attract \u003cbr\u003e\nattention.) See more.",
+   "cacheId": "8ZoI1vUY7k8J",
+   "formattedUrl": "www.dictionary.com/browse/hello",
+   "htmlFormattedUrl": "www.dictionary.com/browse/\u003cb\u003ehello\u003c/b\u003e",
+   "pagemap": {
+    "cse_thumbnail": [
+     {
+      "width": "150",
+      "height": "150",
+      "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGjtm3VlIdT0ABBj9ipqgRJ9rBq91fybtyX_lar-pmzUAr83M1fr0pWW0"
+     }
+    ],
+    "metatags": [
+     {
+      "fb:admins": "100000304287730;109125464873",
+      "og:site_name": "Dictionary.com",
+      "og:image": "http://static.sfdict.com/dcom/img/social_logo-b8e2f.png",
+      "fb:app_id": "127444090629600",
+      "msvalidate.01": "DF5542D7723770377E9ABFF59AC1DC97",
+      "viewport": "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no",
+      "og:title": "the definition of hello",
+      "og:url": "http://www.dictionary.com/browse/hello"
+     }
+    ],
+    "cse_image": [
+     {
+      "src": "http://static.sfdict.com/dcom/img/social_logo-b8e2f.png"
+     }
+    ]
+   }
+  }
+ ]
+}
