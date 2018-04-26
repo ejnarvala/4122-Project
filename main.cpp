@@ -6,24 +6,27 @@
 #include "image_processing.h"
 #include "extracter.h"
 
-
+//Need install these on linux
+//sudo apt install libtesseract-dev
+//sudo apt install tesseract-ocr
+//sudo apt install libtesseract-dev
+//sudo apt install libleptonica-dev
 
 
 
 int main() {
 
-    string extractedString;
-
-
-    Json::Value root;
-    Json::Reader reader;
-
-    std::ifstream file("../searchResult.JSON");
-    file >> root;
-
-
-    extractedString = getString(root);
-    cout << extractedString;
+//    This is for testing jsonparser
+//    string extractedString;
+//    Json::Value root;
+//    Json::Reader reader;
+//
+//    std::ifstream file("../searchResult.JSON");
+//    file >> root;
+//
+//
+//    extractedString = getString(root);
+//    cout << extractedString;
 
     //testFunction();
     return 0;
