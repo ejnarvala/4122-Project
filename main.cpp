@@ -5,6 +5,8 @@
 #include <cstring>
 #include "image_processing.h"
 #include "extracter.h"
+#include "json/json.h"
+#include <vector>
 
 //Need install these on linux
 //sudo apt install libjsoncpp-dev
@@ -13,21 +15,23 @@
 //sudo apt install libleptonica-dev
 
 
-
+using namespace std;
 int main() {
 
     //This is for testing jsonparser
-    string extractedString;
-    Json::Value root;
-    Json::Reader reader;
+//    string extractedString;
+//    Json::Value root;
+//    Json::Reader reader;
+//
+//    ifstream file("../searchResult.JSON");
+//    file >> root;
+//
+//
+//    extractedString = getString(root);
+//    cout << extractedString;
 
-    std::ifstream file("../searchResult.JSON");
-    file >> root;
+    //returns vector of strings, first string being the question, the following being the options
+//    vector<string> questions_answers = ocr_screenshot("./test.png");
 
-
-    extractedString = getString(root);
-    cout << extractedString;
-
-    //testFunction();
     return 0;
 }
