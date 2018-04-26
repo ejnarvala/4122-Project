@@ -31,7 +31,12 @@ int main() {
 //    cout << extractedString;
 
     //returns vector of strings, first string being the question, the following being the options
-//    vector<string> questions_answers = ocr_screenshot("./test.png");
+//    vector<string> questions_answers = ocr_screenshot("../test_data/test1.png");
+    
+    //loop for testing ocr with test data
+//    for(int i = 0; i < questions_answers.size(); i++) {
+//        cout << questions_answers[i] << endl;
+//    }
 
     return 0;
 }
