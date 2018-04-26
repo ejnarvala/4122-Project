@@ -46,8 +46,8 @@ string getString(Json::Value root)
     // concatenate onto the final extracted string
     for(unsigned int index=0; index < items.size();++index)
     {
-        result = result + items[index]["title"].asString();
-        result = result + items[index]["snippet"].asString();
+        result = result + " " + items[index]["title"].asString();
+        result = result + " " + items[index]["snippet"].asString();
     }
     return result;
 }
