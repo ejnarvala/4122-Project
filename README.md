@@ -3,6 +3,7 @@
 ## Dependencies
 * tesseract-ocr
 * leptonica
+* jsoncpp (https://github.com/open-source-parsers/jsoncpp)
 
 
 ## System Requirements
