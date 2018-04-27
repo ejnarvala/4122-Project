@@ -20,6 +20,7 @@ int main() {
 
     //This is for testing jsonparser
 //    string extractedString;
+//    string numResults;
 //    Json::Value root;
 //    Json::Reader reader;
 //
@@ -29,6 +30,9 @@ int main() {
 //
 //    extractedString = getString(root);
 //    cout << extractedString;
+    
+//    numResults = getNumResults(root);
+//    cout << numResults << "\n";
 
     //returns vector of strings, first string being the question, the following being the options
 //    vector<string> questions_answers = ocr_screenshot("../test_data/test1.png");
