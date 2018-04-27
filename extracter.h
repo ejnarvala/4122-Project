@@ -56,5 +56,12 @@ string getString(Json::Value root)
 
 string getNumResults(Json::Value root)
 {
+    string numResults;// final string
 
+    // extract items in root object "queries"
+    const Json::Value items = root["queries"]["request"];
+    
+    // extract total results
+    numResults = items[0]["totalResults"].asString();
+    return numResults;
 }
