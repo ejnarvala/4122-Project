@@ -6,4 +6,6 @@ set(CMAKE_CXX_STANDARD 11)
 
 add_executable(4122_Project main.cpp image_processing.h extracter.h jsoncpp.cpp)
 
-target_link_libraries(4122_Project lept tesseract jsoncpp)
+target_link_libraries(4122_Project lept tesseract jsoncpp curl)
+
+
