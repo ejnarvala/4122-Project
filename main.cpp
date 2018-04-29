@@ -43,7 +43,6 @@ int main() {
     cout << extractedString;
 
     // extract number of results from search result
-    numResults = getNumResults(outputs[0]);
-    cout << numResults << "\n";
-    return 0;
+    //numResults = getNumResults(outputs[0]);
+    //cout << numResults << "\n";
 }
