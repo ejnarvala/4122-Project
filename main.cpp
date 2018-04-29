@@ -40,9 +40,9 @@ int main() {
 
     // extract string from search result
     extractedString = getString(outputs[0]);
-    cout << extractedString;
+    cout << extractedString << "\n";
 
     // extract number of results from search result
-    //numResults = getNumResults(outputs[0]);
-    //cout << numResults << "\n";
+    numResults = getNumResults(outputs[0]);
+    cout << numResults << "\n";
 }

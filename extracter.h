@@ -22,7 +22,7 @@ string getString(string searchResult)
        <<reader.getFormatedErrorMessages()
        <<endl;
 
- }\
+ }
  const Json::Value items = root["items"];
 
  for(unsigned int index=0; index < items.size();++index)
@@ -61,6 +61,30 @@ string getNumResults(Json::Value root)
     // extract items in root object "queries"
     const Json::Value items = root["queries"]["request"];
     
+    // extract total results
+    numResults = items[0]["totalResults"].asString();
+    return numResults;
+}
+
+
+string getNumResults(string searchResult)
+{
+    Json::Value root;// this will store searchresult as json object
+    Json::Reader reader; // json reader
+    bool parsedSuccess = reader.parse(searchResult, root, false);
+
+    if(not parsedSuccess)
+    {
+        cout<<"Failed to parse JSON"<<endl
+            <<reader.getFormatedErrorMessages()
+            <<endl;
+
+    }
+    string numResults;// final string
+
+    // extract items in root object "queries"
+    const Json::Value items = root["queries"]["request"];
+
     // extract total results
     numResults = items[0]["totalResults"].asString();
     return numResults;
