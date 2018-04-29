@@ -14,6 +14,8 @@
 //sudo apt install tesseract-ocr
 //sudo apt install libtesseract-dev
 //sudo apt install libleptonica-dev
+//sudo apt install libcurl4-openssl-dev
+
 
 
 using namespace std;
