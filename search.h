@@ -65,8 +65,22 @@ std::string createGoogleSearch(std::string term, int numResults) {
 }
 
 /* William Trimmer 4/30/18
-   remove spaces and question mark from string
+ * Functions to format OCR results for searching
 */
+// Remove unnecessary words from question
+void removeWords(std::string &formattedString, std::string word) {
+    std::size_t foundWord = formattedString.find(word);
+    if(std::string::npos != foundWord) {
+        if(foundWord == 0) {
+            formattedString.erase(foundWord, word.size()+1);
+        }
+        else {
+            formattedString.erase(foundWord-1, word.size()+1);
+        }
+    }
+}
+// tried to add loop with dictionary to remove words, but too many errors
+// remove spaces and question mark from string
 void formatString(std::string &string) {
     for(int i = 0; i < string.size(); i++) {
         if((string[i] == ' ') || (string[i] == '?')) {
