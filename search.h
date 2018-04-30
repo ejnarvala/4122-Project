@@ -63,3 +63,18 @@ std::string createGoogleSearch(std::string term, int numResults) {
        << "&start=1&key=AIzaSyCHAQ5Df-PcBzhiSYLJlvRoCc-qXK1WrD4&cx=013405187926511280840:o0p-h54b9ze";
     return ss.str();
 }
+
+/* William Trimmer 4/30/18
+ * Functions to format OCR results for searching
+*/
+// remove spaces and question mark from string
+void formatString(std::string &string) {
+    for(int i = 0; i < string.size(); i++) {
+        if((string[i] == ' ') || (string[i] == '?')) {
+            string[i] = '+';
+        }
+    }
+}
+
+// Remove unnecessary words from question
+std::string removeWords(std::string formattedString);
