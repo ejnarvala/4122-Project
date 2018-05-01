@@ -88,3 +88,11 @@ void formatString(std::string &string) {
         }
     }
 }
+
+// function that takes vector with desired words and removes from string
+void reduceString(std::string &formattedString, std::vector<std::string> dict) {
+    for(int i = 0; i < dict.size(); ++i) {
+        std::string word = dict[i];
+        removeWords(formattedString, word);
+    }
+}
