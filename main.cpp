@@ -31,6 +31,13 @@ int main() {
 //    for(int i = 0; i < questions_answers.size(); i++) {
 //        cout << questions_answers[i] << endl;
 //    }
+      
+      // formatting question for search
+//    std::string question = questions_answers[0];
+//    formatString(question);
+//    std::vector<std::string> dictionary = {"a", "the", "that", "these", "is", "what", "called", "which", "of"};
+//    reduceString(question, dictionary);
+//    cout << question << endl;
 
     // searching
     std::vector<std::string> searches;
