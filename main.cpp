@@ -112,7 +112,7 @@ int main() {
         }
         counts2[i-1] = std::stoi(numResults[i]);
     }
-    int sum2 = counts[0] + counts[1] + counts[3];
+    int sum2 = counts[0] + counts[1] + counts[2];
     double pct_hits2[3];
 
     for (int j = 0; j < 3; ++j) {
