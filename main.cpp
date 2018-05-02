@@ -49,9 +49,11 @@ int main() {
     // perform search
     std::vector<std::string> outputs = getResults(searches);
 
-    for(int i = 0; i < outputs.size(); i++) {
-         cout << outputs[i] << endl;
-    }
+    //for testing search
+//    for(int i = 0; i < outputs.size(); i++) {
+//         cout << outputs[i] << endl;
+//    }
+
 
     // extract string from search result
     std::vector<std::string> results;
