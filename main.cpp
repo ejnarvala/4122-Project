@@ -95,6 +95,7 @@ int main() {
         if(std::stoi(numResults[i]) > maxNumResults)
         {
             maxNumResults = std::stoi(numResults[i]);
+            answer2 = questions_answers[i];
         }
     }
 
