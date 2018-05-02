@@ -71,7 +71,7 @@ int main() {
     //method 1//
     string answer1;
     int max = 0;
-    for(int i = 1; i < questions_answers.size(); i++)
+    for(int i = 1; i <= questions_answers.size(); i++)
     {
         stringstream ss(results[0]);
         int cnt=0;
@@ -90,7 +90,7 @@ int main() {
     //method2//
     int maxNumResults = 0;
     string answer2;
-    for (int i = 1; i < numResults.size(); i++)
+    for (int i = 1; i <= numResults.size(); i++)
     {
         if(std::stoi(numResults[i]) > maxNumResults)
         {
