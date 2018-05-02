@@ -72,14 +72,16 @@ int main() {
 
     //method 1//
     string answer1;
+    string word;
     int max = 0;
+    int counts[3];
     for(int i = 1; i <= questions_answers.size(); i++)
     {
         stringstream ss(results[0]);
         int cnt=0;
-        while(ss >> results[0])
+        while(ss >> word)
         {
-            if(results[0] == questions_answers[i])
+            if(word == questions_answers[i])
                 cnt++;
         }
         if (cnt > max)
@@ -87,11 +89,20 @@ int main() {
             max = cnt;
             answer1 = questions_answers[i];
         }
+        counts[i-1] = cnt;
     }
+    int sum = counts[0] + counts[1] + counts[2];
+    double pct_hits[3];
+
+    for (int j = 0; j < 3; ++j) {
+        pct_hits[j] = (double)counts[j] / (double)sum;
+    }
+
 
     //method2//
     int maxNumResults = 0;
     string answer2;
+    int counts2[3];
     for (int i = 1; i <= numResults.size(); i++)
     {
         if(std::stoi(numResults[i]) > maxNumResults)
@@ -99,10 +110,17 @@ int main() {
             maxNumResults = std::stoi(numResults[i]);
             answer2 = questions_answers[i];
         }
+        counts2[i-1] = std::stoi(numResults[i]);
+    }
+    int sum2 = counts[0] + counts[1] + counts[3];
+    double pct_hits2[3];
+
+    for (int j = 0; j < 3; ++j) {
+        pct_hits2[j] = (double)counts2[j] / (double)sum2;
     }
 
     //show two answers
-    cout << answer1 << endl;
-    cout << answer2 << endl;
+    cout << "The question/answer search method yields " <<answer1 << " with the following hit% of the three answers: " << pct_hits[0] <<"  " << pct_hits[1] << "  " << pct_hits[2] << endl;
+    cout << "The total hits method yields " <<answer2 << " with the following hit% of the three answers: " << pct_hits2[0] <<"  " << pct_hits2[1] << "  " << pct_hits2[2] << endl;
 
 }
