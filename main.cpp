@@ -33,18 +33,18 @@ int main() {
       
       // formatting question for search
 
-//    std::string question = questions_answers[0];
-//    formatString(question);
-//    std::vector<std::string> dictionary = {"a", "the", "that", "these", "is", "what", "called", "which", "of"};
-//    reduceString(question, dictionary);
-//    cout << question << endl;
+    std::string question = questions_answers[0];
+    formatString(question);
+    std::vector<std::string> dictionary = {"a", "the", "that", "these", "is", "what", "called", "which", "of"};
+    reduceString(question, dictionary);
+    cout << question << endl;
 
     // searching
     std::vector<std::string> searches;
-    searches.emplace_back(createGoogleSearch(questions_answers[0], 4));                      // just question
-    searches.emplace_back(createGoogleSearch(questions_answers[0]+ " " + questions_answers[1], 4)); // question + choice 1
-    searches.emplace_back(createGoogleSearch(questions_answers[0]+ " " + questions_answers[2], 4)); // question + choice 2
-    searches.emplace_back(createGoogleSearch(questions_answers[0]+ " " + questions_answers[3], 4)); // question + choice 3
+    searches.emplace_back(createGoogleSearch(question, 4));                      // just question
+    searches.emplace_back(createGoogleSearch(question + questions_answers[1], 4)); // question + choice 1
+    searches.emplace_back(createGoogleSearch(question + questions_answers[2], 4)); // question + choice 2
+    searches.emplace_back(createGoogleSearch(question + questions_answers[3], 4)); // question + choice 3
 
     // perform search
     std::vector<std::string> outputs = getResults(searches);
@@ -57,7 +57,7 @@ int main() {
 
     // extract string from search result
     std::vector<std::string> results;
-    for (int i = 0; i <= searches.size(); i++)
+    for (int i = 0; i < searches.size(); i++)
     {
         results.emplace_back(getString(outputs[i]));
     }
@@ -65,15 +65,14 @@ int main() {
 
     // extract number of results from search result
     std::vector<std::string> numResults;
-    for (int i = 0; i <= searches.size(); i++)
+    for (int i = 0; i < searches.size(); i++)
     {
         numResults.emplace_back(getNumResults(outputs[i]));
     }
-
     //method 1//
     string answer1;
     int max = 0;
-    for(int i = 1; i <= questions_answers.size(); i++)
+    for(int i = 1; i < questions_answers.size(); i++)
     {
         stringstream ss(results[0]);
         int cnt=0;
@@ -92,7 +91,7 @@ int main() {
     //method2//
     int maxNumResults = 0;
     string answer2;
-    for (int i = 1; i <= numResults.size(); i++)
+    for (int i = 1; i < numResults.size(); i++)
     {
         if(std::stoi(numResults[i]) > maxNumResults)
         {
