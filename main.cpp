@@ -27,24 +27,24 @@ int main() {
     vector<string> questions_answers = ocr_screenshot("../test_data/test1.png");
     
     //loop for testing ocr with test data
-//    for(int i = 0; i < questions_answers.size(); i++) {
-//        cout << questions_answers[i] << endl;
-//    }
+    for(int i = 0; i < questions_answers.size(); i++) {
+        cout << questions_answers[i] << endl;
+    }
       
       // formatting question for search
 
-//    std::string question = questions_answers[0];
-//    formatString(question);
-//    std::vector<std::string> dictionary = {"a", "the", "that", "these", "is", "what", "called", "which", "of"};
-//    reduceString(question, dictionary);
-//    cout << question << endl;
+    std::string question = questions_answers[0];
+    formatString(question);
+    std::vector<std::string> dictionary = {"a", "the", "that", "these", "is", "what", "called", "which", "of"};
+    reduceString(question, dictionary);
+    cout << question << endl;
 
     // searching
     std::vector<std::string> searches;
-    searches.emplace_back(createGoogleSearch(questions_answers[0], 4));                      // just question
-    searches.emplace_back(createGoogleSearch(questions_answers[0]+ " " + questions_answers[1], 4)); // question + choice 1
-    searches.emplace_back(createGoogleSearch(questions_answers[0]+ " " + questions_answers[2], 4)); // question + choice 2
-    searches.emplace_back(createGoogleSearch(questions_answers[0]+ " " + questions_answers[3], 4)); // question + choice 3
+    searches.emplace_back(createGoogleSearch(question, 4));                      // just question
+    searches.emplace_back(createGoogleSearch(question+questions_answers[1], 4)); // question + choice 1
+    searches.emplace_back(createGoogleSearch(question+questions_answers[2], 4)); // question + choice 2
+    searches.emplace_back(createGoogleSearch(question+questions_answers[3], 4)); // question + choice 3
 
     // perform search
     std::vector<std::string> outputs = getResults(searches);
