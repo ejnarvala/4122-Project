@@ -1,3 +1,8 @@
+//
+// Ju Yup Kim
+// 4/24/2018
+//
+
 #include <cstdio>
 #include <iostream>
 #include <cstring>
