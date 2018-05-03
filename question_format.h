@@ -42,5 +42,17 @@ void formatString(string &string) {
 
 // function that takes vector with desired words and removes from string
 void reduceString(string &formattedString) {
+    removeWords(formattedString, "what+is");
     removeWords(formattedString, "what");
+    removeWords(formattedString, "which+of");
+    removeWords(formattedString, "which");
+    removeWords(formattedString, "these");
+    removeWords(formattedString, "that");
+    removeWords(formattedString, "thanks");
+    removeWords(formattedString, "to+its");
+    removeWords(formattedString, "of+is");
+    removeWords(formattedString, "is+the");
+    removeWords(formattedString, "of+these");
+    removeWords(formattedString, "of+the");
+    removeWords(formattedString, "called");
 }
