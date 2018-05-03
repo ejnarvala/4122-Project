@@ -44,8 +44,6 @@ int main() {
 
     std::string question = questions_answers[0];
     formatString(question);
-    std::vector<std::string> dictionary = {"a", "the", "that", "these", "is", "what", "called", "which", "of"};
-    reduceString(question, dictionary);
     cout << question << endl;
 
 
