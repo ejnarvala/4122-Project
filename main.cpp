@@ -28,39 +28,34 @@ int main() {
     
     //loop for testing ocr with test data
     for(int i = 0; i < questions_answers.size(); i++) {
-        //std::cout << questions_answers[i] << std::endl;
+        cout << questions_answers[i] << endl;
     }
-      
+
+// example
+//    vector<string> questions_answers;
+//    questions_answers.emplace_back("A single piece of clothing that covers the entire body is called what?");
+//    questions_answers.emplace_back("whatsie");
+//    questions_answers.emplace_back("whosie");
+//    questions_answers.emplace_back("onesie");
+
+
+
       // formatting question for search
 
     std::string question = questions_answers[0];
     formatString(question);
     std::vector<std::string> dictionary = {"a", "the", "that", "these", "is", "what", "called", "which", "of"};
     reduceString(question, dictionary);
-    //cout << question << endl;
+    cout << question << endl;
+
+
 
     // searching
     std::vector<std::string> searches;
-    int numSearchResults = 4;
-
-    searches.emplace_back(createGoogleSearch(question, numSearchResults));
-    cout << "emplace" << endl;
-    cout << "q_a size: " << questions_answers.size() << endl;
-    for (int i = 1; i < questions_answers.size(); i++){
-        std::stringstream searchTerm;
-        searchTerm << question << "+" << questions_answers[i];
-        cout << searchTerm.str() << endl;
-        searches.emplace_back(createGoogleSearch(searchTerm.str(), numSearchResults));
-    }
-
-//    searches.emplace_back(createGoogleSearch(question+questions_answers[1], 4)); // question + choice 1
-//    searches.emplace_back(createGoogleSearch(question+questions_answers[2], 4)); // question + choice 2
-//    searches.emplace_back(createGoogleSearch(question+questions_answers[3], 4)); // question + choice 3
-
-    // test searches
-    for(std::string search : searches) {
-        //cout << search << endl;
-    }
+    searches.emplace_back(createGoogleSearch(question, 4));                      // just question
+    searches.emplace_back(createGoogleSearch(question+questions_answers[1], 4)); // question + choice 1
+    searches.emplace_back(createGoogleSearch(question+questions_answers[2], 4)); // question + choice 2
+    searches.emplace_back(createGoogleSearch(question+questions_answers[3], 4)); // question + choice 3
 
     // perform search
     std::vector<std::string> outputs = getResults(searches);
@@ -73,7 +68,7 @@ int main() {
 
     // extract string from search result
     std::vector<std::string> results;
-    for (int i = 0; i <= searches.size(); i++)
+    for (int i = 0; i < searches.size(); i++)
     {
         results.emplace_back(getString(outputs[i]));
     }
@@ -81,23 +76,23 @@ int main() {
 
     // extract number of results from search result
     std::vector<std::string> numResults;
-    for (int i = 0; i <= searches.size(); i++)
+    for (int i = 0; i < searches.size(); i++)
     {
         numResults.emplace_back(getNumResults(outputs[i]));
     }
 
     //method 1//
     string answer1;
-    string word;
     int max = 0;
     int counts[3];
-    for(int i = 1; i <= questions_answers.size(); i++)
+    //cout << results[0];
+    for(int i = 1; i < questions_answers.size(); i++)
     {
         stringstream ss(results[0]);
-        int cnt=0;
-        while(ss >> word)
+        int cnt = 0;
+        while(ss >> results[0])
         {
-            if(word == questions_answers[i])
+            if(results[0] == questions_answers[i])
                 cnt++;
         }
         if (cnt > max)
@@ -119,7 +114,7 @@ int main() {
     int maxNumResults = 0;
     string answer2;
     int counts2[3];
-    for (int i = 1; i <= numResults.size(); i++)
+    for (int i = 1; i < numResults.size(); i++)
     {
         if(std::stoi(numResults[i]) > maxNumResults)
         {
@@ -136,7 +131,11 @@ int main() {
     }
 
     //show two answers
-    cout << "The question/answer search method yields " <<answer1 << " with the following hit% of the three answers: " << pct_hits[0] <<"  " << pct_hits[1] << "  " << pct_hits[2] << endl;
-    cout << "The total hits method yields " <<answer2 << " with the following hit% of the three answers: " << pct_hits2[0] <<"  " << pct_hits2[1] << "  " << pct_hits2[2] << endl;
+    //cout << counts[1];
+    //cout << counts[2];
+    cout << "The question/answer search method yields " <<answer1 //<< " with the following hit% of the three answers: " << pct_hits[0] <<"  " << pct_hits[1] << "  " << pct_hits[2]
+    << endl;
+    cout << "The total hits method yields " <<answer2 //<<" with the following hit% of the three answers: " << pct_hits2[0] <<"  " << pct_hits2[1] << "  " << pct_hits2[2]
+    << endl;
 
 }
