@@ -28,7 +28,7 @@ int main() {
     
     //loop for testing ocr with test data
     for(int i = 0; i < questions_answers.size(); i++) {
-        cout << questions_answers[i] << endl;
+        //std::cout << questions_answers[i] << std::endl;
     }
       
       // formatting question for search
@@ -37,14 +37,30 @@ int main() {
     formatString(question);
     std::vector<std::string> dictionary = {"a", "the", "that", "these", "is", "what", "called", "which", "of"};
     reduceString(question, dictionary);
-    cout << question << endl;
+    //cout << question << endl;
 
     // searching
     std::vector<std::string> searches;
-    searches.emplace_back(createGoogleSearch(question, 4));                      // just question
-    searches.emplace_back(createGoogleSearch(question+questions_answers[1], 4)); // question + choice 1
-    searches.emplace_back(createGoogleSearch(question+questions_answers[2], 4)); // question + choice 2
-    searches.emplace_back(createGoogleSearch(question+questions_answers[3], 4)); // question + choice 3
+    int numSearchResults = 4;
+
+    searches.emplace_back(createGoogleSearch(question, numSearchResults));
+    cout << "emplace" << endl;
+    cout << "q_a size: " << questions_answers.size() << endl;
+    for (int i = 1; i < questions_answers.size(); i++){
+        std::stringstream searchTerm;
+        searchTerm << question << "+" << questions_answers[i];
+        cout << searchTerm.str() << endl;
+        searches.emplace_back(createGoogleSearch(searchTerm.str(), numSearchResults));
+    }
+
+//    searches.emplace_back(createGoogleSearch(question+questions_answers[1], 4)); // question + choice 1
+//    searches.emplace_back(createGoogleSearch(question+questions_answers[2], 4)); // question + choice 2
+//    searches.emplace_back(createGoogleSearch(question+questions_answers[3], 4)); // question + choice 3
+
+    // test searches
+    for(std::string search : searches) {
+        //cout << search << endl;
+    }
 
     // perform search
     std::vector<std::string> outputs = getResults(searches);
