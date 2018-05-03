@@ -1,14 +1,5 @@
 /*
  * Michael Brzozowski 4/28/18
- *
- * download >
- * https://curl.haxx.se/download.html
- *
- * unzip, run these
- * ./configure
- * make
- * make install
- *
  */
 
 #include <iostream>
@@ -46,17 +37,15 @@ std::vector<std::string> getResults(std::vector<std::string> &searches) {
             curl_easy_perform(curl);
             curl_easy_cleanup(curl);
             curl = nullptr;
-            //
+
             responses.emplace_back(response_string);
         }
     }
     return responses;
 }
 
-/*
- * Insert parameters into the search url
- */
 
+//Insert parameters into the search url
 std::string createGoogleSearch(std::string term, int numResults) {
     std::stringstream ss;
     ss << "https://www.googleapis.com/customsearch/v1?q=" << term << "&num=" << numResults
