@@ -44,6 +44,7 @@ int main() {
 
     std::string question = questions_answers[0];
     formatString(question);
+    reduceString(question);
     formatString(questions_answers[1]);
     formatString(questions_answers[2]);
     formatString(questions_answers[3]);
