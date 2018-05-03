@@ -24,7 +24,7 @@ using namespace std;
 int main() {
 
     //returns vector of strings, first string being the question, the following being the options
-    vector<string> questions_answers = ocr_screenshot("../test_data/test1.png");
+    vector<string> questions_answers = ocr_screenshot("../test_data/test3.png");
     
     //loop for testing ocr with test data
     for(int i = 0; i < questions_answers.size(); i++) {
@@ -50,10 +50,10 @@ int main() {
 
     // searching
     std::vector<std::string> searches;
-    searches.emplace_back(createGoogleSearch(question, 4));                      // just question
-    searches.emplace_back(createGoogleSearch(question+questions_answers[1], 4)); // question + choice 1
-    searches.emplace_back(createGoogleSearch(question+questions_answers[2], 4)); // question + choice 2
-    searches.emplace_back(createGoogleSearch(question+questions_answers[3], 4)); // question + choice 3
+    searches.emplace_back(createGoogleSearch(question, 10));                      // just question
+    searches.emplace_back(createGoogleSearch(question+questions_answers[1], 10)); // question + choice 1
+    searches.emplace_back(createGoogleSearch(question+questions_answers[2], 10)); // question + choice 2
+    searches.emplace_back(createGoogleSearch(question+questions_answers[3], 10)); // question + choice 3
 
     // perform search
     std::vector<std::string> outputs = getResults(searches);
@@ -86,12 +86,17 @@ int main() {
     //cout << results[0];
     for(int i = 1; i < questions_answers.size(); i++)
     {
-        stringstream ss(results[0]);
+        //stringstream ss(results[0]);
         int cnt = 0;
-        while(ss >> results[0])
+        size_t nPos = results[0].find(questions_answers[i],0);
+        while(nPos != string::npos)
         {
-            if(results[0] == questions_answers[i])
-                cnt++;
+//            if(results[0] == questions_answers[i]){
+//                cnt++;
+//            }
+            cnt++;
+            nPos = results[0].find(questions_answers[i], nPos + 1);
+            //cout << results[0] << " " << endl;
         }
         if (cnt > max)
         {
@@ -105,6 +110,7 @@ int main() {
 
     for (int j = 0; j < 3; ++j) {
         pct_hits[j] = (double)counts[j] / (double)sum;
+        pct_hits[j] *= 100;
     }
 
 
@@ -121,19 +127,29 @@ int main() {
         }
         counts2[i-1] = std::stoi(numResults[i]);
     }
-    int sum2 = counts[0] + counts[1] + counts[2];
+    int sum2 = counts2[0] + counts2[1] + counts2[2];
     double pct_hits2[3];
 
     for (int j = 0; j < 3; ++j) {
         pct_hits2[j] = (double)counts2[j] / (double)sum2;
+        pct_hits2[j] *= 100;
+
     }
+    cout << sum2 << " " << sum << endl;
+    cout << counts2[0] << " " << counts2[1] << " " <<  counts2[2] << endl;
+    cout << counts[0] << " " << counts[1] << " " <<  counts[2] << endl;
+    cout << pct_hits[0] << " " << pct_hits[1] << " " <<  pct_hits[2] << endl;
+    cout << pct_hits2[0] << " " << pct_hits2[1] << " " <<  pct_hits2[2] << endl;
+
 
     //show two answers
     //cout << counts[1];
     //cout << counts[2];
-    cout << "The question/answer search method yields " <<answer1 //<< " with the following hit% of the three answers: " << pct_hits[0] <<"  " << pct_hits[1] << "  " << pct_hits[2]
+    /*
+    cout << "The question/answer search method yields:    " <<answer1 << "   with the following hit% of the three answers: " << setprecision(2) << pct_hits[0] <<"  " << setprecision(2) <<pct_hits[1] << "  " <<  setprecision(2) << pct_hits[2]
     << endl;
-    cout << "The total hits method yields " <<answer2 //<<" with the following hit% of the three answers: " << pct_hits2[0] <<"  " << pct_hits2[1] << "  " << pct_hits2[2]
+    cout << "The total hits method yields:   " <<answer2 <<"   with the following hit% of the three answers: " << setprecision(2) << pct_hits2[0] <<"  " << setprecision(2) << pct_hits2[1] << "  " << setprecision(2) << pct_hits2[2]
     << endl;
+     */
 
 }
