@@ -44,9 +44,9 @@ int main() {
 
     std::string question = questions_answers[0];
     formatString(question);
-    cout << question << endl;
-
-
+    formatString(questions_answers[1]);
+    formatString(questions_answers[2]);
+    formatString(questions_answers[3]);
 
     // searching
     std::vector<std::string> searches;
