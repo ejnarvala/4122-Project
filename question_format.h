@@ -21,6 +21,10 @@
         }
     }
 }
+
+bool invalidChar(char c) {
+     return !(c>=0 && c <128);
+ }
 // tried to add loop with dictionary to remove words, but too many errors
 // remove spaces and question mark from string
 void formatString(string &string) {
@@ -28,16 +32,27 @@ void formatString(string &string) {
         if((string[i] == ' ') || (string[i] == '?') || (string[i] == '-')) {
             string[i] = '+';
         }
-        string.erase(remove(string.begin(), string.end(), '"'), string.end());
+        if(string[i] == '"') {
+            string.erase(remove(string.begin(), string.end(), '"'), string.end());
+        }
         string.erase(remove(string.begin(), string.end(), ','), string.end());
     }
+    string.erase(remove_if(string.begin(), string.end(), invalidChar),string.end());
 }
 
 // function that takes vector with desired words and removes from string
-void reduceString(string &formattedString, vector<std::string> dict) {
-    for(int i = 0; i < dict.size(); i++) {
-        string word = dict[i];
-        removeWords(formattedString, word);
-        cout << formattedString << endl;
-    }
+void reduceString(string &formattedString) {
+    removeWords(formattedString, "what+is");
+    removeWords(formattedString, "what");
+    removeWords(formattedString, "which+of");
+    removeWords(formattedString, "which");
+    removeWords(formattedString, "these");
+    removeWords(formattedString, "that");
+    removeWords(formattedString, "thanks");
+    removeWords(formattedString, "to+its");
+    removeWords(formattedString, "of+is");
+    removeWords(formattedString, "is+the");
+    removeWords(formattedString, "of+these");
+    removeWords(formattedString, "of+the");
+    removeWords(formattedString, "called");
 }
