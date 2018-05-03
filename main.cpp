@@ -24,7 +24,7 @@ using namespace std;
 int main() {
 
     //returns vector of strings, first string being the question, the following being the options
-    vector<string> questions_answers = ocr_screenshot("../test_data/test3.png");
+    vector<string> questions_answers = ocr_screenshot("../test_data/test9.png");
     
     //loop for testing ocr with test data
     if(questions_answers.size()){
@@ -46,6 +46,11 @@ int main() {
 
 
       // formatting question for search
+
+
+
+    vector<string> questions_answers_copy = questions_answers;
+
 
     std::string question = questions_answers[0];
     formatString(question);
@@ -95,24 +100,24 @@ int main() {
     int max = 0;
     int counts[3];
     //cout << results[0];
-    for(int i = 1; i < questions_answers.size(); i++)
+    for(int i = 1; i < questions_answers_copy.size(); i++)
     {
         //stringstream ss(results[0]);
         int cnt = 0;
-        size_t nPos = results[0].find(questions_answers[i],0);
+        size_t nPos = results[0].find(questions_answers_copy[i],0);
         while(nPos != string::npos)
         {
 //            if(results[0] == questions_answers[i]){
 //                cnt++;
 //            }
             cnt++;
-            nPos = results[0].find(questions_answers[i], nPos + 1);
+            nPos = results[0].find(questions_answers_copy[i], nPos + 1);
 
         }
         if (cnt > max)
         {
             max = cnt;
-            answer1 = questions_answers[i];
+            answer1 = questions_answers_copy[i];
             method_1_answer_num = i;
         }
         counts[i-1] = cnt;
@@ -137,7 +142,7 @@ int main() {
         {
             maxNumResults = std::stoi(numResults[i]);
             method_2_answer_num = i;
-            answer2 = questions_answers[i];
+            answer2 = questions_answers_copy[i];
         }
         counts2[i-1] = std::stoi(numResults[i]);
     }
