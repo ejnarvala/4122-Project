@@ -49,7 +49,7 @@ std::vector<std::string> getResults(std::vector<std::string> &searches) {
 std::string createGoogleSearch(std::string term, int numResults) {
     std::stringstream ss;
     ss << "https://www.googleapis.com/customsearch/v1?q=" << term << "&num=" << numResults
-       << "&start=1&key=AIzaSyCHAQ5Df-PcBzhiSYLJlvRoCc-qXK1WrD4&cx=013405187926511280840:o0p-h54b9ze";
+       << "&start=1&key=AIzaSyCViH6dcY5vWEhuT9RcxasIiIWFn6e4j2k&cx=012526511752601831072:8b2zjb7mixc";
     return ss.str();
 }
 

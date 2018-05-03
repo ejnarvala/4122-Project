@@ -27,9 +27,14 @@ int main() {
     vector<string> questions_answers = ocr_screenshot("../test_data/test3.png");
     
     //loop for testing ocr with test data
-    for(int i = 0; i < questions_answers.size(); i++) {
-        cout << questions_answers[i] << endl;
+    if(questions_answers.size()){
+        cout << "Question: " << questions_answers[0] << endl;
+        for(int n = 1; n < questions_answers.size(); n++){
+            cout << n << ". " << questions_answers[n] << endl;
+        }
     }
+
+    cout << endl;
 
 // example
 //    vector<string> questions_answers;
@@ -79,9 +84,14 @@ int main() {
     {
         numResults.emplace_back(getNumResults(outputs[i]));
     }
+    if(results[0].length() == 0){
+        cout << "Ending program: no search results" << endl;
+    }
+
 
     //method 1//
     string answer1;
+    int method_1_answer_num;
     int max = 0;
     int counts[3];
     //cout << results[0];
@@ -97,12 +107,13 @@ int main() {
 //            }
             cnt++;
             nPos = results[0].find(questions_answers[i], nPos + 1);
-            //cout << results[0] << " " << endl;
+
         }
         if (cnt > max)
         {
             max = cnt;
             answer1 = questions_answers[i];
+            method_1_answer_num = i;
         }
         counts[i-1] = cnt;
     }
@@ -119,11 +130,13 @@ int main() {
     int maxNumResults = 0;
     string answer2;
     int counts2[3];
+    int method_2_answer_num;
     for (int i = 1; i < numResults.size(); i++)
     {
         if(std::stoi(numResults[i]) > maxNumResults)
         {
             maxNumResults = std::stoi(numResults[i]);
+            method_2_answer_num = i;
             answer2 = questions_answers[i];
         }
         counts2[i-1] = std::stoi(numResults[i]);
@@ -136,21 +149,26 @@ int main() {
         pct_hits2[j] *= 100;
 
     }
-    cout << sum2 << " " << sum << endl;
-    cout << counts2[0] << " " << counts2[1] << " " <<  counts2[2] << endl;
-    cout << counts[0] << " " << counts[1] << " " <<  counts[2] << endl;
-    cout << pct_hits[0] << " " << pct_hits[1] << " " <<  pct_hits[2] << endl;
-    cout << pct_hits2[0] << " " << pct_hits2[1] << " " <<  pct_hits2[2] << endl;
+//    cout << sum2 << " " << sum << endl;
+//    cout << counts2[0] << " " << counts2[1] << " " <<  counts2[2] << endl;
+//    cout << counts[0] << " " << counts[1] << " " <<  counts[2] << endl;
+//    cout << pct_hits[0] << " " << pct_hits[1] << " " <<  pct_hits[2] << endl;
+//    cout << pct_hits2[0] << " " << pct_hits2[1] << " " <<  pct_hits2[2] << endl;
 
 
     //show two answers
     //cout << counts[1];
     //cout << counts[2];
-    /*
-    cout << "The question/answer search method yields:    " <<answer1 << "   with the following hit% of the three answers: " << setprecision(2) << pct_hits[0] <<"  " << setprecision(2) <<pct_hits[1] << "  " <<  setprecision(2) << pct_hits[2]
-    << endl;
-    cout << "The total hits method yields:   " <<answer2 <<"   with the following hit% of the three answers: " << setprecision(2) << pct_hits2[0] <<"  " << setprecision(2) << pct_hits2[1] << "  " << setprecision(2) << pct_hits2[2]
-    << endl;
-     */
+    if (counts[0] == 0 && counts[1] == 0 && counts[2] == 0) {
+    cout << "Method 1 yielded no search hits" <<endl;
+    }else{
+        cout << "Method 1 Suggests: " << method_1_answer_num << ". " << answer1 << endl
+             << "Hit Percentages: " << endl
+             << pct_hits[0] << "%  " << pct_hits[1] << "%  " << pct_hits[2] << "%" << endl << endl;
+    }
+    cout << "Method 2 Suggests: " << method_2_answer_num << ". " << answer2 << endl
+         << "Hit Percentages: " << endl << setprecision(2)
+         << pct_hits2[0] <<"%  " << setprecision(2) << pct_hits2[1] << "%  " << setprecision(2) << pct_hits2[2] <<"%" << endl;
+
 
 }
